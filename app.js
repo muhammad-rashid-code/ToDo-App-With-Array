@@ -13,6 +13,7 @@ function add() {
   if (editIndexFor !== null) {
     myDataBase[editIndexFor] = todovalue;
     editIndexFor = null;
+    // todoInputField.focus();
     btnAdd.innerHTML = "Add";
   } else {
     myDataBase.push(todovalue);
@@ -46,5 +47,6 @@ function deleteTodo(deleteIndex) {
 function editTodo(editIndex) {
   todoInputField.value = myDataBase[editIndex];
   btnAdd.innerHTML = "Update";
+    todoInputField.focus();
   editIndexFor = editIndex;
 }
